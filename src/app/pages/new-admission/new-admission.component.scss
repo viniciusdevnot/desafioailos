@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.bg {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px;
+}
+h1 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+h5 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+p {
+  color: #4f575e;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+a {
+  color: #165c7d;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+input {
+  padding: 8px;
+  border-radius: 2px;
+  border: 1px solid #889499;
+  margin-right: 15px;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 2px;
+  border: 1px solid #889499;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.column {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.titleDesc {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  color: #787878;
+  text-align: left;
+}
+
+.title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #040f14;
+}

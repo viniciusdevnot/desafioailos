@@ -1,0 +1,65 @@
+<div class="bg">
+  <h1>Informe o CPF do futuro cooperado (a)</h1>
+  <p>Se necessário, você poderá duplicar uma conta existente ou pausar e retornar este cadastro futuramente. <br/>Digite apenas os números (sem pontos ou traços).</p>
+
+
+  <div>
+    <form [formGroup]="usuario"  (ngSubmit)="validarCpf()">
+      <label for="cpf">CPF</label><br/>
+      <input type="text" placeholder="Digite o CPF" formControlName="cpf" />
+      <button [style.background-color]="!usuario.valid ? '#8697A1' : '#165c7d'" [disabled]="!usuario.valid">Consultar por CPF</button>
+      <h6 *ngIf="error"> cpf invalido</h6>
+    </form>
+  </div>
+
+  <div class="row" *ngIf="user">
+  <app-card style="margin-top: 30px; margin-right: 16px;">
+    <h4>Situação cadastral do CPF</h4>
+    <p>Consulta na Receita Federal</p>
+    <div class="row" >
+      <span class="material-icons" style="color: #889499">person</span>
+      <div class="column">
+        <span class="titleDesc">Nome</span>
+        <span class="title">{{user.nome}}</span>
+      </div>
+
+    </div>
+    <div class="row">
+      <span class="material-icons" style="color: #00C246;">done</span>
+      <div class="column">
+        <span class="titleDesc">Situação do CPF</span>
+        <span class="title">{{user.situationCPf}}</span>
+      </div>
+    </div>
+
+  </app-card>
+
+  <app-card style="margin-top: 30px;  margin-right: 16px">
+    <h4>Conta aplicação</h4>
+    <p>Cooperativa viacred</p>
+    <div class="row" >
+      <span class="material-icons" style="color: #889499">credit_card</span>
+      <div class="column">
+        <span class="titleDesc">Número da conta</span>
+        <span class="title">12412412</span>
+      </div>
+    </div>
+    <a>Duplicar conta</a>
+
+  </app-card>
+
+  <app-card style="margin-top: 30px">
+    <h4>Conta corrente</h4>
+    <p>Cooperativa viacred</p>
+    <div class="row" >
+      <span class="material-icons" style="color: #889499">credit_card</span>
+      <div class="column">
+        <span class="titleDesc">Número da conta</span>
+        <span class="title">12412412</span>
+      </div>
+    </div>
+    <a>Duplicar conta</a>
+
+  </app-card>
+  </div>
+</div>
